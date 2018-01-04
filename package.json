@@ -3,15 +3,19 @@
   "version": "0.29.5",
   "esy": {
     "build": [
-      "which pkg-config || (find ./ -exec touch -t 200905000000 {} \\; && ./configure --with-internal-glib --prefix $cur__install && make && make install)"
+      [
+        "bash",
+        "-c",
+        "which pkg-config || (find ./ -exec touch -t 200905000000 {} \\; && ./configure --with-internal-glib --prefix $cur__install && make && make install)"
+      ]
     ],
     "exportedEnv": {
       "PKG_CONFIG_PATH": {
         "scope": "global",
         "val": "/usr/lib/pkgconfig:/usr/local/lib/pkgconfig:/usr/share/pkgconfig:/usr/local/share/pkgconfig:$cur__lib:$PKG_CONFIG_PATH"
       }
-   },
-   "buildsInSource": true
+    },
+    "buildsInSource": true
   },
   "keywords": [],
   "author": "",
