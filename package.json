@@ -6,7 +6,7 @@
       [
         "bash",
         "-c",
-        "which pkg-config || (find ./ -exec touch -t 200905000000 {} \\; && ./configure --with-internal-glib --prefix $cur__install && make && make install)"
+        "which pkg-config || (./esy/build.sh)"
       ]
     ],
     "exportedEnv": {
@@ -15,7 +15,7 @@
         "val": "/usr/lib/pkgconfig:/usr/local/lib/pkgconfig:/usr/share/pkgconfig:/usr/local/share/pkgconfig:$cur__lib:$PKG_CONFIG_PATH"
       }
     },
-    "buildsInSource": true
+    "buildsInSource": "_build"
   },
   "keywords": [],
   "author": "",
