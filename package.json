@@ -15,7 +15,7 @@
         "val": "/usr/lib/pkgconfig:/usr/local/lib/pkgconfig:/usr/share/pkgconfig:/usr/local/share/pkgconfig:$cur__lib:$PKG_CONFIG_PATH"
       }
     },
-    "buildsInSource": "_build"
+    "buildsInSource": true
   },
   "keywords": [],
   "author": "",
