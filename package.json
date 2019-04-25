@@ -12,7 +12,7 @@
     "exportedEnv": {
       "PKG_CONFIG_PATH": {
         "scope": "global",
-        "val": "/usr/lib/pkgconfig:/usr/local/lib/pkgconfig:/usr/share/pkgconfig:/usr/local/share/pkgconfig:$cur__lib:$PKG_CONFIG_PATH"
+        "val": "#{'/usr/lib/pkgconfig':'/usr/local/lib/pkgconfig':'/usr/share/pkgconfig':'/usr/local/share/pkgconfig':$cur__lib:$PKG_CONFIG_PATH}"
       }
     },
     "buildsInSource": true
