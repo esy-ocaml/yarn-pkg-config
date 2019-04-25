@@ -4,10 +4,10 @@
   "esy": {
     "build": [
       [
-        "bash",
-        "-c",
-        "which pkg-config || (./esy/build.sh)"
-      ]
+         "bash",
+         "-c",
+        "which pkg-config || (find ./ -exec touch -t 200905010101 {} + && ./configure --with-internal-glib --prefix $cur__install #{os == 'windows' ? '--host x86_64-w64-mingw32' : ''} && make && make install)"
+       ]
     ],
     "exportedEnv": {
       "PKG_CONFIG_PATH": {
