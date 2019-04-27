@@ -1,0 +1,17 @@
+{
+  "name": "test-yarn-pkgconfig",
+  "version": "0.0.0",
+  "description": "My Project",
+  "esy": {
+    "build": [
+      "pkg-config --libs libssl"
+    ]
+  },
+  "dependencies": {
+    "pkg-config": "*",
+    "openssl": "esy-packages/esy-openssl#94c6694ab30c8b7039caf03acb1d1804fb889e05"
+  },
+  "resolutions": {
+    "pkg-config": "link:../esy-pkgconfig"
+  } 
+}
