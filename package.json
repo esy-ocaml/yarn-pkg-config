@@ -3,11 +3,14 @@
   "version": "0.29.5",
   "esy": {
     "build": [
+      "find ./ -exec touch -t 200905010101 {} +",
       [
          "bash",
          "-c",
-        "which pkg-config || (find ./ -exec touch -t 200905010101 {} + && ./configure --with-internal-glib --prefix $cur__install #{os == 'windows' ? '--host x86_64-w64-mingw32' : ''} && make && make install)"
-       ]
+        "./configure --with-internal-glib --prefix $cur__install #{os == 'windows' ? '--host x86_64-w64-mingw32' : ''}"
+      ],
+      "make",
+      "make install"
     ],
     "exportedEnv": {
       "PATH": {
