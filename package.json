@@ -12,7 +12,7 @@
     "exportedEnv": {
       "PATH": {
         "scope": "global",
-        "val": "#{'/usr/x86_64-w64-mingw32/sys-root/mingw/bin': $PATH}"
+        "val": "#{ (os == 'windows' ? '/usr/x86_64-w64-mingw32/sys-root/mingw/bin': '') : $PATH}"
       },
       "PKG_CONFIG_PATH": {
         "scope": "global",
