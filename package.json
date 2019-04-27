@@ -10,6 +10,10 @@
        ]
     ],
     "exportedEnv": {
+      "PATH": {
+        "scope": "global",
+        "val": "#{ (os == 'windows' ? '/usr/x86_64-w64-mingw32/sys-root/mingw/bin': '') : $PATH}"
+      },
       "PKG_CONFIG_PATH": {
         "scope": "global",
         "val": "#{'/usr/lib/pkgconfig':'/usr/local/lib/pkgconfig':'/usr/share/pkgconfig':'/usr/local/share/pkgconfig':$cur__lib:$PKG_CONFIG_PATH}"
